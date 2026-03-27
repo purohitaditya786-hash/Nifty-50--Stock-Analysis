@@ -14,7 +14,7 @@ An end-to-end data analysis project focusing on the Nifty 50 Index. I processed 
 * **Market Dynamics:** Evaluated **Price Momentum** and **Moving Strength** to identify trend exhaustion points.
 * **Sentiment & Outliers:** Categorized market days as Bullish/Bearish based on open-close delta and identified record-breaking volume days.
 
-### 📊 Strategic Business Insights
+### Strategic Business Insights
 * **Institutional Buying:** High **Turnover Efficiency** often precedes a major trend reversal, indicating "Smart Money" accumulation.
 * **The Weekend Effect:** Found that high volatility on a Friday typically leads to a "Bearish" opening on Monday (58% probability).
 * **Price Exhaustion:** Identified that when **Price Momentum** hits extreme levels with low **Moving Strength**, the market enters a sideways regime for 3–5 days.
