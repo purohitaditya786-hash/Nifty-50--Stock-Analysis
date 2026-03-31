@@ -6,9 +6,9 @@ An end-to-end data analysis project focusing on the Nifty 50 Index. I processed 
 *  **[View SQL Analysis Script](nifty_50_analysis.sql)**
 
 ## Project Dashboards
-![Dashboard 1](Screenshot%20(55).png)
+![Dashboard 1](Screenshot%20(57).png)
 ![Dashboard 2](Screenshot%20(56).png)
-![Dashboard 3](Screenshot%20(57).png)
+![Dashboard 3](Screenshot%20(55).png)
 
 ### Technical Highlights
 * **SQL:** Performed **150+ queries** using Window Functions, CTEs, and Joins to extract financial insights.
@@ -32,25 +32,25 @@ To analyze market trends, I implemented several advanced SQL techniques:
 
 ### 1. Market Sentiment (Bullish/Bearish)
 Used **Window Functions** to compare current price with the 50-day Moving Average.
-\`\`\`sql
+\`\`\`sql 
 -- Logic to identify Bullish/Bearish Trends
 AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 49 PRECEDING AND CURRENT ROW) AS MA_50
-\`\`\`
+ \`\`\`
 
 ### 2. Volatility Tracking
 Calculated daily percentage spreads to identify high-risk trading sessions.
-\`\`\`sql
+\`\`\`sql 
 ROUND(((high_price - low_price) / low_price) * 100, 2) AS Volatility_Percentage
-\`\`\`
+ \`\`\`
 
-### 3. 7-Day Moving Average (Trend analysing)
-Used **Window Functions** to calculate a rolling average of the closing price, which helps in identifying short-term market trends by smoothing out daily fluctuations.
+### 3. 7-Day Moving Average (Trend Analysing)
+Used **Window Functions** to calculate a rolling average...
 
-\`\`\`sql
+\`\`\`sql 
 SELECT 
     trading_date, 
-    close_price,
-    ROUND(AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day
+    close_price, 
+    ROUND(AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day 
 FROM nifty_50;
-\`\`\`
+ \`\`\`
 
