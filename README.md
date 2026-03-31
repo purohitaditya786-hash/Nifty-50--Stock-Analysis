@@ -53,4 +53,14 @@ SELECT
     ROUND(AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day 
 FROM nifty_50;
  \`\`\`
+ ## 📊 Project Dashboards
+
+### Market Volatility & Risk Analysis
+![Volatility Dashboard](Screenshot%20(56).png)
+
+### Price Trends & Trading Volume
+![Trend Dashboard](Screenshot%20(55).png)
+
+### Key Metrics Overview
+![Metrics Dashboard](Screenshot%20(57).png)
 
