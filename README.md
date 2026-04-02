@@ -34,12 +34,16 @@ AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 49 PRECEDING AND CURRE
 
 ### 2. Volatility Tracking
 Calculated daily percentage spreads to identify high-risk trading sessions.
+
+
 \`\`\`sql 
 ROUND(((high_price - low_price) / low_price) * 100, 2) AS Volatility_Percentage
  \`\`\`
+ 
 
 ### 3. 7-Day Moving Average (Trend Analysing)
 Used **Window Functions** to calculate a rolling average...
+
 
 \`\`\`sql 
 SELECT 
@@ -48,7 +52,9 @@ SELECT
     ROUND(AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day 
 FROM nifty_50;
  \`\`\`
-## 📊 Project Dashboards
+ 
+ 
+## Project Dashboards
 
 ### 1️⃣ Executive Market Overview
 - **Objective:** High-level summary of Nifty 50 performance.
