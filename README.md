@@ -43,9 +43,9 @@ Used **Window Functions** to calculate a rolling average...
 
 sql 
 SELECT 
-    trading_date, 
+    YEAR,month,day, 
     close_price, 
-    ROUND(AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day 
+    ROUND(AVG(close_price) OVER (ORDER BY YEAR,month,day ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day 
 FROM nifty_50;
  
  ## Project Dashboards
