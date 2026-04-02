@@ -5,11 +5,6 @@ An end-to-end data analysis project focusing on the Nifty 50 Index. I processed 
 ### Quick Links
 *  **[View SQL Analysis Script](nifty_50_analysis.sql)**
 
-## Project Dashboards
-![Dashboard 1](Screenshot%20(57).png)
-![Dashboard 2](Screenshot%20(56).png)
-![Dashboard 3](Screenshot%20(55).png)
-
 ### Technical Highlights
 * **SQL:** Performed **150+ queries** using Window Functions, CTEs, and Joins to extract financial insights.
 * **Power BI:** Built 3 interactive dashboards for market visualization, utilizing **Data Modeling** and **Power Query**.
@@ -53,14 +48,17 @@ SELECT
     ROUND(AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day 
 FROM nifty_50;
  \`\`\`
- ## 📊 Project Dashboards
+## 📊 Project Dashboards
 
-### Market Volatility & Risk Analysis
-![Volatility Dashboard](Screenshot%20(56).png)
+### 1️⃣ Executive Market Overview
+- **Objective:** High-level summary of Nifty 50 performance.
+- ![Market Overview](https://github.com/purohitaditya786-hash/Nifty-50--Stock-Analysis/blob/main/dashboard1.png?raw=true)
 
-### Price Trends & Trading Volume
-![Trend Dashboard](Screenshot%20(55).png)
+### 2️⃣ Price Trend & Yearly Volatility
+- **Objective:** Comparative analysis of Open vs. Close prices and volatility.
+- ![Price Trends](https://github.com/purohitaditya786-hash/Nifty-50--Stock-Analysis/blob/main/dashboard2.png?raw=true)
 
-### Key Metrics Overview
-![Metrics Dashboard](Screenshot%20(57).png)
+### 3️⃣ Risk & Volume Analysis
+- **Objective:** Deep dive into Market Risk and Trading Volume.
+- ![Risk Analysis](https://github.com/purohitaditya786-hash/Nifty-50--Stock-Analysis/blob/main/dashboard3.png?raw=true)
 
