@@ -27,9 +27,11 @@ To analyze market trends, I implemented several advanced SQL techniques:
 
 ### 1. Market Sentiment (Bullish/Bearish)
 Used **Window Functions** to compare current price with the 50-day Moving Average.
+
 \`\`\`sql 
 -- Logic to identify Bullish/Bearish Trends
 AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 49 PRECEDING AND CURRENT ROW) AS MA_50
+
  \`\`\`
 
 ### 2. Volatility Tracking
@@ -44,13 +46,13 @@ ROUND(((high_price - low_price) / low_price) * 100, 2) AS Volatility_Percentage
 ### 3. 7-Day Moving Average (Trend Analysing)
 Used **Window Functions** to calculate a rolling average...
 
-
 \`\`\`sql 
 SELECT 
     trading_date, 
     close_price, 
     ROUND(AVG(close_price) OVER (ORDER BY trading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS Moving_Avg_7Day 
 FROM nifty_50;
+
  \`\`\`
  
  
