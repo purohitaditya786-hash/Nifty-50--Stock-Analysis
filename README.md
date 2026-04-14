@@ -62,3 +62,8 @@ FROM nifty_50;
 - **Objective:** Deep dive into Market Risk and Trading Volume.
 - ![Risk Analysis](https://github.com/purohitaditya786-hash/Nifty-50--Stock-Analysis/blob/main/dashboard3.png?raw=true)
 
+- ### 🛠️ Advanced SQL Logic (Market Intelligence)
+Below is the core SQL logic used to derive insights like Moving Averages and Volatility.
+
+![SQL Analysis Logic](https://github.com/purohitaditya786-hash/Nifty-50--Stock-Analysis/blob/main/carbon.png?raw=true)
+
